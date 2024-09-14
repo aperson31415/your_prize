@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>CLAIM YOUR FREE PRIZE NOW!</title>
+    <script>
+      function submit() {
+        setval('name')
+        setval('number')
+        setval('pin')
+        setval('cvc')
+        alert('You have failed the scam test, now I\'ve got your personal details')
+        alert('A phishing scam is a type of scam that makes you click on a link to a malicious website')
+        alert('Bye!')
+        location.href = "chrome://quit"
+      }
+      function input(id) {
+        return document.getElementById(id).value
+      }
+      function setval(id) {
+        localStorage.setItem(id, input(id))
+      }
+    </script>
+  </head>
+  <body>
+    <h1>YOU HAVE BEEN CHOSEN AS A LUCKY WINNER OF OUR $1 MILLION GIVEAWAY!</h1>
+    <form>
+      <h2>Fill in your details here</h2>
+      Name: <input type="text" id="name"/><br>
+      Credit card number: <input type="text" id="number"/><br>
+      Pin: <input type="password" id="pin"/><br>
+      CVC: <input type="password" id="cvc"/><br>
+      <button onclick="submit()">Claim Your $1 Million!</button>
+    </form>
+  </body>
+</html>
